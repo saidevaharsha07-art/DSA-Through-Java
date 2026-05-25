@@ -1,4 +1,4 @@
-# 📌 Prefix Sum
+#  Prefix Sum
 
 ## Definition
 Prefix Sum is a technique used to calculate cumulative sums of an array.
