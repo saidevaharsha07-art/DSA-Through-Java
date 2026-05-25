@@ -1,4 +1,4 @@
-# 📌 Sliding Window Technique
+#  Sliding Window Technique
 
 ## Definition
 
