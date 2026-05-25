@@ -1,10 +1,10 @@
-#  Two Pointers Technique
+# 📌 Sliding Window Technique
 
 ## Definition
 
-Two Pointers is an optimization technique where two pointers are used to traverse an array or string from different positions.
+Sliding Window is an optimization technique used to solve problems involving contiguous subarrays or substrings.
 
-Instead of using nested loops, two pointers help reduce the time complexity.
+Instead of recalculating values for every subarray, we maintain a window and slide it through the array.
 
 Time Complexity:
 - O(n)
@@ -14,13 +14,13 @@ Space Complexity:
 
 ---
 
-## Why Use Two Pointers?
+## Why Use Sliding Window?
 
-Without Two Pointers:
+Brute Force:
 
 ```java
 for(int i = 0; i < n; i++) {
-    for(int j = i + 1; j < n; j++) {
+    for(int j = i; j < n; j++) {
 
     }
 }
@@ -32,7 +32,7 @@ Time Complexity:
 O(n²)
 ```
 
-Using Two Pointers:
+Sliding Window:
 
 ```text
 O(n)
@@ -44,223 +44,261 @@ Much faster for large inputs.
 
 # Basic Idea
 
-Use two pointers:
-
-```text
-Left Pointer  → Starts from beginning
-
-Right Pointer → Starts from end
-```
+Maintain a window of size k.
 
 Example:
 
 ```text
-Index : 0 1 2 3 4 5
-
 Array : 1 2 3 4 5 6
 
-        ↑       ↑
-      left    right
+Window Size = 3
+
+[1 2 3] 4 5 6
+
+1 [2 3 4] 5 6
+
+1 2 [3 4 5] 6
+
+1 2 3 [4 5 6]
 ```
 
-Move pointers based on the condition.
+Instead of recalculating the sum every time:
+
+```text
+Remove outgoing element
+
+Add incoming element
+```
 
 ---
 
-# Example 1 : Pair Sum
-
-Problem:
-
-Find two numbers whose sum equals target.
+# Example 1 : Maximum Sum Subarray of Size K
 
 Array:
 
 ```text
-1 2 3 4 6 8
+2 1 5 1 3 2
 ```
 
-Target:
+Window Size:
 
 ```text
-10
+3
 ```
 
----
-
-## Approach
+Subarrays:
 
 ```text
-left = 0
-right = n - 1
+2 + 1 + 5 = 8
+
+1 + 5 + 1 = 7
+
+5 + 1 + 3 = 9
+
+1 + 3 + 2 = 6
 ```
 
-Check:
+Maximum Sum:
 
 ```text
-1 + 8 = 9
+9
 ```
-
-Less than target
-
-Move left
-
-```text
-2 + 8 = 10
-```
-
-Found answer
 
 ---
 
 ## Java Program
 
 ```java
-int arr[] = {1, 2, 3, 4, 6, 8};
+int arr[] = {2, 1, 5, 1, 3, 2};
 
-int target = 10;
+int k = 3;
 
-int left = 0;
-int right = arr.length - 1;
+int windowSum = 0;
 
-while(left < right) {
-
-    int sum = arr[left] + arr[right];
-
-    if(sum == target) {
-        System.out.println(arr[left] + " " + arr[right]);
-        break;
-    }
-    else if(sum < target) {
-        left++;
-    }
-    else {
-        right--;
-    }
+for(int i = 0; i < k; i++) {
+    windowSum += arr[i];
 }
+
+int maxSum = windowSum;
+
+for(int i = k; i < arr.length; i++) {
+
+    windowSum = windowSum - arr[i - k];
+
+    windowSum = windowSum + arr[i];
+
+    maxSum = Math.max(maxSum, windowSum);
+}
+
+System.out.println(maxSum);
 ```
 
 Output:
 
 ```text
-2 8
+9
 ```
 
 ---
 
-# Example 2 : Reverse an Array
+# Dry Run
 
 Array:
 
 ```text
-1 2 3 4 5
+2 1 5 1 3 2
 ```
 
-Swap first and last elements.
-
----
-
-## Process
+Window Size:
 
 ```text
-1 2 3 4 5
+3
+```
 
-Swap 1 and 5
+First Window:
 
-5 2 3 4 1
+```text
+2 + 1 + 5 = 8
+```
 
-Swap 2 and 4
+Slide Window:
 
-5 4 3 2 1
+```text
+Remove 2
+
+Add 1
+
+1 + 5 + 1 = 7
+```
+
+Slide Again:
+
+```text
+Remove 1
+
+Add 3
+
+5 + 1 + 3 = 9
+```
+
+Slide Again:
+
+```text
+Remove 5
+
+Add 2
+
+1 + 3 + 2 = 6
+```
+
+Maximum:
+
+```text
+9
 ```
 
 ---
 
-## Java Program
+# Example 2 : Average of Every Subarray of Size K
+
+Array:
+
+```text
+1 3 2 6 -1 4 1 8 2
+```
+
+Window Size:
+
+```text
+5
+```
+
+Java Program:
 
 ```java
-int arr[] = {1, 2, 3, 4, 5};
+int arr[] = {1, 3, 2, 6, -1, 4, 1, 8, 2};
 
-int left = 0;
-int right = arr.length - 1;
+int k = 5;
 
-while(left < right) {
+int windowSum = 0;
 
-    int temp = arr[left];
-    arr[left] = arr[right];
-    arr[right] = temp;
-
-    left++;
-    right--;
+for(int i = 0; i < k; i++) {
+    windowSum += arr[i];
 }
 
-for(int num : arr) {
-    System.out.print(num + " ");
+System.out.println((double)windowSum / k);
+
+for(int i = k; i < arr.length; i++) {
+
+    windowSum -= arr[i - k];
+
+    windowSum += arr[i];
+
+    System.out.println((double)windowSum / k);
 }
-```
-
-Output:
-
-```text
-5 4 3 2 1
 ```
 
 ---
 
-# Example 3 : Check Palindrome
+# Fixed Size Sliding Window
 
-String:
+Window size remains constant.
+
+Example:
 
 ```text
-MADAM
+Find maximum sum subarray of size 3.
 ```
+
+Window:
+
+```text
+[1 2 3]
+
+[2 3 4]
+
+[3 4 5]
+```
+
+Size always remains 3.
 
 ---
 
-## Process
+# Variable Size Sliding Window
+
+Window size changes based on conditions.
+
+Example:
 
 ```text
-M == M
-
-A == A
-
-D
+Longest substring without repeating characters.
 ```
 
-All characters match.
+Window expands and shrinks dynamically.
 
-Palindrome.
-
----
-
-## Java Program
-
-```java
-String str = "MADAM";
-
-int left = 0;
-int right = str.length() - 1;
-
-boolean palindrome = true;
-
-while(left < right) {
-
-    if(str.charAt(left) != str.charAt(right)) {
-        palindrome = false;
-        break;
-    }
-
-    left++;
-    right--;
-}
-
-System.out.println(palindrome);
-```
-
-Output:
+Example:
 
 ```text
-true
+abcabcbb
 ```
+
+Window grows:
+
+```text
+a
+
+ab
+
+abc
+```
+
+Duplicate found:
+
+```text
+Shrink window
+```
+
+Continue process.
 
 ---
 
@@ -271,100 +309,64 @@ Array:
 
 1 2 3 4 5 6
 
-↑         ↑
-L         R
+Window Size = 3
 
-Move pointers towards each other
+[1 2 3] 4 5 6
 
-1 2 3 4 5 6
-  ↑     ↑
+Remove 1
 
-1 2 3 4 5 6
-    ↑ ↑
+1 [2 3 4] 5 6
 
-Done
-```
+Remove 2
 
----
+1 2 [3 4 5] 6
 
-# Types of Two Pointers
+Remove 3
 
-## 1. Opposite Direction
-
-```text
-Left → Start
-
-Right → End
-```
-
-Used for:
-
-- Pair Sum
-- Reverse Array
-- Palindrome
-
----
-
-## 2. Same Direction
-
-```text
-Slow Pointer
-Fast Pointer
-```
-
-Used for:
-
-- Remove Duplicates
-- Move Zeros
-- Sliding Window Problems
-
-Example:
-
-```text
-Slow → i
-
-Fast → j
+1 2 3 [4 5 6]
 ```
 
 ---
 
 # Applications
 
-### 1. Pair Sum Problems
+### 1. Maximum Sum Subarray
 
-Find two numbers with given sum.
+Most common application.
 
-### 2. Reverse Array
+### 2. Average of Subarrays
 
-Reverse array efficiently.
+Calculate averages efficiently.
 
-### 3. Palindrome Checking
+### 3. Longest Substring Problems
 
-Compare characters from both ends.
+Used heavily in string questions.
 
-### 4. Remove Duplicates
+### 4. Count Distinct Elements
 
-Efficiently remove duplicates from sorted arrays.
+Window-based frequency counting.
 
-### 5. Sliding Window Problems
+### 5. Interview Problems
 
-Foundation for many advanced array problems.
+Frequently asked in coding interviews.
 
 ---
 
 # Key Points
 
-- Uses two indices instead of nested loops.
-- Reduces time complexity significantly.
-- Works best on sorted arrays.
-- Can move in opposite or same direction.
-- Commonly asked in interviews.
+- Used for contiguous subarrays/substrings.
+- Avoids recalculating entire window.
+- Add incoming element.
+- Remove outgoing element.
+- Fixed Window → Size remains constant.
+- Variable Window → Size changes dynamically.
+- Time Complexity = O(n).
 
 ---
 
 ## Interview Definition
 
-Two Pointers is a technique that uses two indices to traverse a data structure efficiently, reducing unnecessary comparisons and improving time complexity.
+Sliding Window is an optimization technique that maintains a subset of consecutive elements and updates the result by sliding the window instead of recalculating values repeatedly.
 
 ---
 
@@ -373,29 +375,31 @@ Two Pointers is a technique that uses two indices to traverse a data structure e
 Array:
 
 ```text
-1 2 3 4 6 8
+2 1 5 1 3 2
 ```
 
-Target:
+Window Size:
 
 ```text
-10
+3
 ```
 
-Process:
+Windows:
 
 ```text
-1 + 8 = 9
+2 1 5 → 8
 
-Move left
+1 5 1 → 7
 
-2 + 8 = 10
+5 1 3 → 9
+
+1 3 2 → 6
 ```
 
-Answer:
+Maximum:
 
 ```text
-2 8
+9
 ```
 
 ---
@@ -403,20 +407,17 @@ Answer:
 ## Memory Trick
 
 ```text
-Need two values?
+Window moves one step at a time.
 
-Use two pointers.
+Remove old element.
 
-Sum small?
-Move left.
+Add new element.
 
-Sum large?
-Move right.
+Update answer.
 
-Equal?
-Answer found.
+Repeat.
 ```
 
 ### One-Line Idea
 
-👉 Two Pointers = "Use two indices intelligently instead of checking every pair."
+👉 Sliding Window = "Reuse previous calculations while moving through the array."
