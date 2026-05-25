@@ -17,7 +17,6 @@ public class PivotIndex {
             int rightSum = TotalSum - leftSum - arr[i];
             if (leftSum == rightSum) {
                 System.out.println("Pivot Index: " + i);
-                return;
             }
             leftSum += arr[i];
         }
