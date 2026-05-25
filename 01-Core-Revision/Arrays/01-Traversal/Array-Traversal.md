@@ -170,3 +170,27 @@ Output:
 ```text
 1 2 3 4 5
 ```
+# Array Traversal
+
+## Definition
+Array Traversal is the process of visiting each element of an array exactly once.
+
+## Types
+
+### 1. Forward Traversal
+Visits elements from first to last.
+
+Example:
+1 → 2 → 3 → 4 → 5
+
+### 2. Reverse Traversal
+Visits elements from last to first.
+
+Example:
+5 → 4 → 3 → 2 → 1
+
+## Time Complexity
+O(n)
+
+## Space Complexity
+O(1)
