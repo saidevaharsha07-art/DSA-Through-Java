@@ -17,8 +17,8 @@
 # 1️⃣ Core Revision (Day 1-20)
 
 ## Arrays
-- [ ] Traversal
-- [ ] Prefix Sum
+- [x] Traversal
+- [] Prefix Sum
 - [ ] Kadane's Algorithm
 - [ ] Two Pointers
 - [ ] Sliding Window
