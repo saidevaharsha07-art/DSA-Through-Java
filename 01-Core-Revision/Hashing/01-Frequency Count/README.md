@@ -1,4 +1,4 @@
-# 📌 Frequency Count
+#  Frequency Count
 
 ## Definition
 
