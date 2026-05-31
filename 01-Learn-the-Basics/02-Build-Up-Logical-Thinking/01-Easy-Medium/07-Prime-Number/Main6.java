@@ -7,7 +7,6 @@ public class Main6 {
         int n = sc.nextInt();
         if (n <= 1) {
             System.out.print(n + " is not a prime number.");
-            return;
         } else {
             for (int i = 2; i * i <= n; i++) {
                 if (n % i == 0) {
