@@ -374,7 +374,7 @@ System.out.println(s1.charAt(1) == s2.charAt(1));
 Output:
 
 ```text
-true
+false
 ```
 
 ---
@@ -415,12 +415,12 @@ Hello World
 
 # Difference Between Array and String
 
-| Array | String |
-|---------|---------|
-| Stores same type elements | Stores characters |
-| Fixed Size | Fixed Size |
-| Access using index | Access using charAt() |
-| arr.length | s.length() |
+| Array                     | String                |
+| ------------------------- | --------------------- |
+| Stores same type elements | Stores characters     |
+| Fixed Size                | Fixed Size            |
+| Access using index        | Access using charAt() |
+| arr.length                | s.length()            |
 
 ---
 
