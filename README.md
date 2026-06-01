@@ -13,7 +13,7 @@ Learning Data Structures & Algorithms using Java by following the Striver A2Z DS
 - [x] If Else
 - [x] Switch Case
 - [x] Arrays and Strings
-- [ ] For Loops
+- [x] For Loops
 - [ ] While Loops
 - [ ] Functions
 - [ ] Theory Examples
