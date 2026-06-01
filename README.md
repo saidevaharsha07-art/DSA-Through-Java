@@ -24,7 +24,7 @@ Learning Data Structures & Algorithms using Java by following the Striver A2Z DS
 
 - [x] Sum of N Numbers
 - [x] Sum of Digits
-- [ ] Reverse a Number
+- [x] Reverse a Number
 - [ ] Count Digits
 - [ ] Palindrome Number
 - [ ] Armstrong Number
