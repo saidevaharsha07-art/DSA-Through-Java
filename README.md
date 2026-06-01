@@ -9,7 +9,7 @@ Learning Data Structures & Algorithms using Java by following the Striver A2Z DS
 #### 01-Things-to-Know-in-Java
 
 - [x] Input Output
-- [ ] Java Basics
+- [x] Java Basics
 - [ ] If Else
 - [ ] Switch Case
 - [ ] Arrays and Strings
