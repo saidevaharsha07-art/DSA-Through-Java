@@ -14,9 +14,9 @@ Learning Data Structures & Algorithms using Java by following the Striver A2Z DS
 - [x] Switch Case
 - [x] Arrays and Strings
 - [x] For Loops
-- [ ] While Loops
-- [ ] Functions
-- [ ] Theory Examples
+- [x] While Loops
+- [x] Functions
+- [x] Theory Examples
 
 #### 02-Build-Up-Logical-Thinking
 
