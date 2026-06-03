@@ -1,0 +1,101 @@
+[33mcommit b7381b6e08f766baaeedb1e471603c6aba5d8fb5[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Harsha <saidevaharsha07@gmail.com>
+Date:   Wed Jun 3 06:36:18 2026 +0530
+
+    Added README files for Java basics folders
+
+[33mcommit db3f6b9e7855cae78c7b4e8660895e4e4d3d37da[m
+Author: Harsha <saidevaharsha07@gmail.com>
+Date:   Wed Jun 3 06:02:35 2026 +0530
+
+    Added pattern README files and logic notes
+
+[33mcommit 2f7437bba9975e0f6cd2cc407eb9457316acd9a0[m
+Author: Harsha <saidevaharsha07@gmail.com>
+Date:   Sun May 31 13:22:42 2026 +0530
+
+    Edited the wrong output
+
+[33mcommit b5e66a5596134d0aaecf5768c45fceeb702b911b[m
+Author: Harsha <saidevaharsha07@gmail.com>
+Date:   Fri May 29 16:23:09 2026 +0530
+
+    Added time and space complexity notes
+
+[33mcommit b07fd4123d7ea7a24cc018926bbb5a1da1359bfd[m
+Author: Harsha <saidevaharsha07@gmail.com>
+Date:   Fri May 29 16:20:21 2026 +0530
+
+    Added Java functions and parameter passing notes
+
+[33mcommit 2a18d258deb19b482a27057f111b0dd5c995b90f[m
+Author: Harsha <saidevaharsha07@gmail.com>
+Date:   Fri May 29 16:17:32 2026 +0530
+
+    Added Java while loop notes
+
+[33mcommit e5e8ff8c552303b8c247fd75421cc79ab074a43c[m
+Author: Harsha <saidevaharsha07@gmail.com>
+Date:   Fri May 29 16:15:21 2026 +0530
+
+    Added Java for loop notes
+
+[33mcommit 85b26a5956b0d8a6ea13c2bc36a2d9b4098bf69f[m
+Author: Harsha <saidevaharsha07@gmail.com>
+Date:   Fri May 29 16:11:28 2026 +0530
+
+    Added Java arrays and strings notes
+
+[33mcommit 72830c9d0a6a613485fc66739b2106610997ca4b[m
+Author: Harsha <saidevaharsha07@gmail.com>
+Date:   Fri May 29 16:09:00 2026 +0530
+
+    Added Java switch case notes
+
+[33mcommit ee5fa4433eb6c2595590b26c28fc58985d34343c[m
+Author: Harsha <saidevaharsha07@gmail.com>
+Date:   Fri May 29 16:05:07 2026 +0530
+
+    Added Java if else notes
+
+[33mcommit a78aca61e522f0f1038edfdd02ec233a1bb4d7ff[m
+Author: Harsha <saidevaharsha07@gmail.com>
+Date:   Fri May 29 16:04:51 2026 +0530
+
+    Added Java if else notes
+
+[33mcommit 79bb4fef4ce144683ec46800cca6f407ebbbd8d0[m
+Author: Harsha <saidevaharsha07@gmail.com>
+Date:   Fri May 29 16:02:03 2026 +0530
+
+    Added Java basics notes
+
+[33mcommit 4f4b5bfe11c0d977ab977edce8c749d3e44152c4[m
+Author: Harsha <saidevaharsha07@gmail.com>
+Date:   Fri May 29 16:01:45 2026 +0530
+
+    Added Java basics notes
+
+[33mcommit 6b9314e2033b12ebd52130f79436b144b43457ea[m
+Author: Harsha <saidevaharsha07@gmail.com>
+Date:   Fri May 29 15:57:48 2026 +0530
+
+    Added Java input output notes
+
+[33mcommit 5a8f1adf4ccd23c207e04c822ef2e1d63a83bbaf[m
+Author: Harsha <saidevaharsha07@gmail.com>
+Date:   Fri May 29 15:55:11 2026 +0530
+
+    Added Java input output notes
+
+[33mcommit 30b68c1b93948bc21171a048d5577d38fedd22a4[m
+Author: Harsha <saidevaharsha07@gmail.com>
+Date:   Fri May 29 15:42:54 2026 +0530
+
+    Reordered Learn the Basics folders to match Striver A2Z
+
+[33mcommit 1fd1279a86fa6115026807406e5e3d758ca0c217[m
+Author: Harsha <saidevaharsha07@gmail.com>
+Date:   Fri May 29 14:54:27 2026 +0530
+
+    Added Learn the Basics roadmap structure
