@@ -1,9 +1,3 @@
-
----
-
-### `03-Palindrome-Number/Level-3/README.md`
-
-```md
 # Level 3 - Palindrome Without Reversing Entire Number
 
 ## Question

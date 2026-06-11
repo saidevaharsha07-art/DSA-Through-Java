@@ -1,9 +1,3 @@
-
----
-
-### `01-Count-Digits/Level-3/README.md`
-
-```md
 # Level 3 - Count Digits Using Math Formula
 
 ## Question

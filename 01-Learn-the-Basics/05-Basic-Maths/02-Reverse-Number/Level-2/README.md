@@ -1,9 +1,3 @@
-
----
-
-### `02-Reverse-Number/Level-2/README.md`
-
-```md
 # Level 2 - Reverse Number with Edge Cases
 
 ## Question

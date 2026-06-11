@@ -1,9 +1,3 @@
-
----
-
-### `03-Palindrome-Number/Level-2/README.md`
-
-```md
 # Level 2 - Palindrome Number with Edge Cases
 
 ## Question

@@ -1,9 +1,3 @@
-
----
-
-### `02-Reverse-Number/Level-3/README.md`
-
-```md
 # Level 3 - Reverse Number and Check Overflow
 
 ## Question

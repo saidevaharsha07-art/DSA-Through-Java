@@ -1,9 +1,3 @@
-
----
-
-### `01-Count-Digits/Level-2/README.md`
-
-```md
 # Level 2 - Count Digits with Edge Cases
 
 ## Question
