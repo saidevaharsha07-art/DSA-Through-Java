@@ -9,6 +9,7 @@ public class Main {
         int n = sc.nextInt();
         if (n == 0) {
             System.out.println("Digits: 1");
+            sc.close();
             return;
         }
         n = Math.abs(n);

@@ -16,7 +16,6 @@ public class Main {
             return;
         }
         while (temp > 0) {
-            int digit = temp % 10;
             count++;
             temp /= 10;
         }
