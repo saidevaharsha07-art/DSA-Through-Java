@@ -1,8 +1,7 @@
 import java.util.Scanner;
 
-public class Factorial {
-
-    public static void printName(int count, int n) {
+public class Main {
+    static void printName(int count, int n) {
         if (count > n) {
             return;
         }
@@ -12,9 +11,8 @@ public class Factorial {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the number: ");
+        System.out.print("Enter N : ");
         int n = sc.nextInt();
         printName(1, n);
-        sc.close();
     }
 }
