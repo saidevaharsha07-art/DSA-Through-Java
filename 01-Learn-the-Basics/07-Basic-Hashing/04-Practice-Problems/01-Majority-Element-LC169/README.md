@@ -1,50 +1,36 @@
-# 🎯 Contains Duplicate (LeetCode 217)
+# 🎯 Majority Element - LeetCode 169
 
 ## Problem Statement
 
-Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
+Given an array `nums` of size `n`, return the majority element.
+
+The majority element is the element that appears more than `n / 2` times.
 
 ---
 
-## Example 1
-
-Input:
+## Example
 
 ```text
-[1,2,3,1]
+Input: nums = [3,2,3]
+Output: 3
 ```
 
-Output:
-
 ```text
-true
-```
-
----
-
-## Example 2
-
-Input:
-
-```text
-[1,2,3,4]
-```
-
-Output:
-
-```text
-false
+Input: nums = [2,2,1,1,1,2,2]
+Output: 2
 ```
 
 ---
 
-## Approach
+## Approach: Boyer-Moore Voting Algorithm
 
-Use HashSet.
+Maintain a candidate and a count.
 
-If an element already exists in the set, return true.
+If count becomes 0, choose the current element as candidate.
 
-Otherwise add it to the set.
+If current element is equal to candidate, increase count.
+
+Otherwise, decrease count.
 
 ---
 
@@ -57,11 +43,11 @@ O(N)
 ## Space Complexity
 
 ```text
-O(N)
+O(1)
 ```
 
 ---
 
 ## Key Learning
 
-HashSet is useful for detecting duplicates efficiently.
+Boyer-Moore Voting Algorithm is used when the majority element appears more than `n / 2` times.

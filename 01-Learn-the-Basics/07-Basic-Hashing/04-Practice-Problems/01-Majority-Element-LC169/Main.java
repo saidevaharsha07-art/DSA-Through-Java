@@ -1,17 +1,20 @@
-import java.util.HashSet;
-
 class Solution {
-    public boolean containsDuplicate(int[] nums) {
-
-        HashSet<Integer> set = new HashSet<>();
+    public int majorityElement(int[] nums) {
+        int count = 0;
+        int candidate = 0;
 
         for (int num : nums) {
-            if (set.contains(num)) {
-                return true;
+            if (count == 0) {
+                candidate = num;
             }
-            set.add(num);
+
+            if (num == candidate) {
+                count++;
+            } else {
+                count--;
+            }
         }
 
-        return false;
+        return candidate;
     }
 }
