@@ -1,19 +1,23 @@
-import java.util.HashSet;
-
 class Solution {
-    public boolean containsDuplicate(int[] nums) {
+    public boolean isAnagram(String s, String t) {
 
-        HashSet<Integer> set = new HashSet<>();
-
-        for (int num : nums) {
-
-            if (set.contains(num)) {
-                return true;
-            }
-
-            set.add(num);
+        if (s.length() != t.length()) {
+            return false;
         }
 
-        return false;
+        int hash[] = new int[26];
+
+        for (int i = 0; i < s.length(); i++) {
+            hash[s.charAt(i) - 'a']++;
+            hash[t.charAt(i) - 'a']--;
+        }
+
+        for (int num : hash) {
+            if (num != 0) {
+                return false;
+            }
+        }
+
+        return true;
     }
 }

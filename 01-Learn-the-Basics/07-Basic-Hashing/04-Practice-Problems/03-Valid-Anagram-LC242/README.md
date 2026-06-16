@@ -1,44 +1,60 @@
-# 🎯 Contains Duplicate - LeetCode 217
+# 🎯 Valid Anagram - LeetCode 242
 
 ## Problem Statement
 
-Given an integer array `nums`, return `true` if any value appears at least twice in the array, and return `false` if every element is distinct.
+Given two strings `s` and `t`, return `true` if `t` is an anagram of `s`, and `false` otherwise.
+
+An Anagram is a word formed by rearranging the letters of another word using all original letters exactly once.
 
 ---
 
 ## Example 1
 
 ```text
-Input: [1,2,3,1]
-Output: true
+Input:
+s = "anagram"
+t = "nagaram"
+
+Output:
+true
 ```
+
+---
 
 ## Example 2
 
 ```text
-Input: [1,2,3,4]
-Output: false
+Input:
+s = "rat"
+t = "car"
+
+Output:
+false
 ```
 
 ---
 
 ## Approach
 
-Use a HashSet.
+Use Character Hashing.
 
-If an element already exists in the set, a duplicate is found.
+Count frequency of each character in the first string.
 
-Otherwise add it to the set.
+Subtract frequency using the second string.
+
+If all frequencies become 0, both strings are anagrams.
 
 ---
 
 ## Algorithm
 
-1. Create a HashSet.
-2. Traverse the array.
-3. If element exists in set → return true.
-4. Otherwise add element to set.
-5. If traversal completes → return false.
+1. If lengths are different → return false.
+2. Create hash array of size 26.
+3. Traverse first string and increase frequency.
+4. Traverse second string and decrease frequency.
+5. Check hash array.
+6. If any frequency is not 0 → return false.
+7. Otherwise return true.
 
 ---
 
@@ -51,24 +67,25 @@ O(N)
 ## Space Complexity
 
 ```text
-O(N)
+O(1)
 ```
 
 ---
 
 ## Key Learning
 
-HashSet provides O(1) average lookup and insertion.
+Character Hashing is useful for:
 
-Useful for:
-- Duplicate Detection
-- Unique Elements
-- Fast Searching
+- Anagrams
+- Character Frequency
+- String Matching
+- Sliding Window Problems
 
 ---
 
-## Related Problems
+## Revision Formula
 
-- LC 219: Contains Duplicate II
-- LC 220: Contains Duplicate III
-- LC 349: Intersection of Two Arrays
+```java
+hash[s.charAt(i) - 'a']++;
+hash[t.charAt(i) - 'a']--;
+```
