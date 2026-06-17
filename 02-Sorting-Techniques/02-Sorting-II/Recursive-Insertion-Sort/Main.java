@@ -8,7 +8,7 @@ public class Main {
             return;
         }
 
-        insertionSort(arr, n - 1);
+        insertionSort(arr, n - 1)
 
         int last = arr[n - 1];
         int j = n - 2;
